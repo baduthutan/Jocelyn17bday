@@ -220,11 +220,11 @@
     </style>
   </head>
   <body>
-    @if(session('success'))
+<!--     @if(session('success'))
     <script>
       alert("{{ session('success') }}");
     </script>
-    @endif
+    @endif -->
     <audio id="myAudio" autoplay loop>
       <source src="assets/sound.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
@@ -496,7 +496,7 @@
           method="post"
           class="wish-form tw-text-slate-50"
         >
-          @csrf
+<!--           @csrf -->
           <label for="sender" class="text-start w-100 tw-mb-[10px]"
             >Nama:</label
           >
@@ -525,12 +525,20 @@
           </button>
         </form>
         <div class="tw-max-h-[40vw] tw-overflow-y-scroll tw-text-slate-50">
-          @foreach($wishes as $wish)
+<!--           @foreach($wishes as $wish) -->
           <div class="tw-p-[5px] border-bottom border-3">
-            {{ $wish->sender }}<br />
-            {{ $wish->wish }}
+            Cleonima<br />
+            have gread sweet seventeen!
           </div>
-          @endforeach
+          <div class="tw-p-[5px] border-bottom border-3">
+            Nicole<br />
+            HSS
+          </div>
+          <div class="tw-p-[5px] border-bottom border-3">
+            Zia<br />
+            hbd boo!
+          </div>
+<!--           @endforeach -->
         </div>
       </section>
       <section class="tw-bottom-[5%] tw-px-[3vw] md:tw-px-[34vw]">
@@ -625,7 +633,7 @@
         <div class="py-5"></div>
         <div class="py-3 ds-com"></div>
         <div class="dear-box">
-          <h3 class="tw-translate-y-[-16vw]">{{ $guest->name }}</h3>
+          <h3 class="tw-translate-y-[-16vw]">Cleonima</h3>
         </div>
         <p class="mb-0 mt-1 fs-4 fw-light" style="color: #fdf8d3">
           Valid for: 1 person
@@ -688,30 +696,30 @@
       });
 
       // Countdown Timer Functionality
-      $(document).ready(function () {
-        let countDownDate = new Date(2024, 1, 17, 18, 0, 0, 0).getTime();
-        let interval = setInterval(function () {
-          let now = new Date().getTime();
-          let distance = countDownDate - now;
+      // $(document).ready(function () {
+      //   let countDownDate = new Date(2024, 1, 17, 18, 0, 0, 0).getTime();
+      //   let interval = setInterval(function () {
+      //     let now = new Date().getTime();
+      //     let distance = countDownDate - now;
 
-          let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          let hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      //     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      //     let hours = Math.floor(
+      //       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      //     );
+      //     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      //     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          $("#day").text(String(days).padStart(2, "0"));
-          $("#hrs").text(String(hours).padStart(2, "0"));
-          $("#min").text(String(minutes).padStart(2, "0"));
-          $("#sec").text(String(seconds).padStart(2, "0"));
+      //     $("#day").text(String(days).padStart(2, "0"));
+      //     $("#hrs").text(String(hours).padStart(2, "0"));
+      //     $("#min").text(String(minutes).padStart(2, "0"));
+      //     $("#sec").text(String(seconds).padStart(2, "0"));
 
-          if (distance < 0) {
-            clearInterval(interval);
-            $(".countdown-timer").text("EXPIRED");
-          }
-        }, 1000);
-      });
+      //     if (distance < 0) {
+      //       clearInterval(interval);
+      //       $(".countdown-timer").text("EXPIRED");
+      //     }
+      //   }, 1000);
+      // });
       function act1() {
         $(".carousel-item").removeClass("active");
         $("#act1").addClass("active");
